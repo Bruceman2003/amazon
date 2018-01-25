@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="css/jquery/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="css/fontawesome/fa-svg-with-js.css" />
     <link rel="stylesheet" href="css/index.css" />
 
 </head>
@@ -157,8 +159,15 @@
     </footer>
 
     <script src="js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery/jquery-confirm.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome/fa-brands.min.js"></script>
+    <script src="js/fontawesome/fa-regular.min.js"></script>
+    <script src="js/fontawesome/fa-solid.min.js"></script>
+    <script src="js/fontawesome/fa-v4-shims.min.js"></script>
+    <script src="js/fontawesome/fontawesome-all.min.js"></script>
+    <script src="js/fontawesome/fontawesome.min.js"></script>
     <script>
         $(document).ready(function() {
             const business_name = "Amazon";
@@ -181,12 +190,7 @@
         });
 
         $(document).on('click', '.delete_item', function() {
-
-            var cart = $(this).closest('table');
-            var block = $(this).closest('tr');
-            block.remove();
-            getTotalSale(cart);
-
+            ConfirmDialog($(this));
         });
 
         function getSubtotalPerQuantity(item) {
@@ -212,6 +216,37 @@
             total.text(sum.toFixed(2));
 
         }
+
+        function ConfirmDialog(item) {
+            $.confirm({
+                theme: 'dark',
+                type: 'orange',
+                icon: 'fa fa-warning',
+                title: 'Advertencia!',
+                content: '¿Está seguro de que desea eliminar?',
+                buttons: {
+
+                    cancel: {
+                        text: 'Cancelar',
+                        btnClass: 'btn-secondary',
+                        action: function() {
+                            $.alert('Canceled!');
+                        }
+                    },
+                    confirm: {
+                        text: 'Eliminar',
+                        btnClass: 'btn-primary',
+                        keys: ['enter', 'shift'],
+                        action: function() {
+                            var cart = item.closest('table');
+                            var block = item.closest('tr');
+                            block.remove();
+                            getTotalSale(cart);
+                        }
+                    }
+                }
+            });
+        };
     </script>
 
     <!-- poner ofertas de 2 por uno -->
