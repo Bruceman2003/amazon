@@ -81,7 +81,7 @@
                     <tbody>
                         <tr>
                             <td>
-                                <img src="images/aceite.jpg" width="60px" class="img-thumbnail" alt="Coke">
+                                <img src="images/aceite.jpg" width="60px" class="img-thumbnail" alt="aceite">
                             </td>
                             <td>
                                 <p data-toggle="tooltip" data-placement="top" title="PlayStation Controler DualShock4, Magma Red - PlayStation 4 Standard Edition">Aceite Capullo 100% puro de canola 845 ml</p>
@@ -169,6 +169,7 @@
     <script src="js/fontawesome/fontawesome-all.min.js"></script>
     <script src="js/fontawesome/fontawesome.min.js"></script>
     <script src="js/elevatezoom/jquery.elevateZoom-3.0.8.min.js"></script>
+
     <script>
         $(document).ready(function() {
             const business_name = "Amazon";
@@ -181,6 +182,10 @@
             $(".category_text").text(categories_text);
             $(".department_text").text(department_text);
             $(".home_text").text(home_text);
+
+            $('img').elevateZoom({
+                scrollZoom: true
+            });
 
         })
 
