@@ -16,16 +16,18 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">BMN</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link home_text" href="#"><span class="sr-only">(current)</span></a>
+                    <a class="nav-link home_text" href="#">
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
@@ -45,16 +47,11 @@
                     <input class="form-control" type="text" placeholder="Buscar" aria-label="Buscar">
                 </li>
             </ul>
-
-
         </div>
     </nav>
 
     <main role="main">
-
-        <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
-
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
@@ -64,10 +61,10 @@
                             <button type="button" class="btn btn-primary">Altas</button>
                         </div>
                     </div>
-
                 </div>
 
                 <h4 class="title">Carrito</h4>
+
                 <table class="table table-dark table-striped" hidden>
                     <thead>
                         <tr>
@@ -89,22 +86,31 @@
                                 <small class="text-primary float-right delete_item">Eliminar</small>
                             </td>
                             <td>
-                                <small class="text-muted"> <del><span class="money_type">$</span>
-                                <span class="">27.50</span></del> <span> - </span>
-                                <div class="btn-group">
-                                    <input class="form-control discount" type="number" value="0" min="0"  max="100" style="width: 75px;height: 25px;">
-                                    <button type="button" class="btn btn-secondary" style="height: 25px;padding: 0;">%</button>
-                                </div></small><br/>
-
+                                <small class="text-muted">
+                                    <del>
+                                        <span class="money_type">$</span>
+                                        <span class="">27.50</span>
+                                    </del>
+                                    <span> - </span>
+                                    <div class="btn-group">
+                                        <input class="form-control discount" type="number" value="0" min="0" max="100" style="width: 75px;height: 25px;">
+                                        <button type="button" class="btn btn-secondary" style="height: 25px;padding: 0;">%</button>
+                                    </div>
+                                </small>
+                                <br/>
                                 <span class="money_type">$</span>
                                 <span class="total_per_unit" data-price="27.50">27.50</span>
 
-                                <i class="fas fa-eye-slash float-right" hidden></i> <i class="fas fa-eye float-right"> </i><small class="text-primary float-right">Desc. </small>
+                                <i class="fas fa-eye-slash float-right" hidden></i>
+                                <i class="fas fa-eye float-right"> </i>
+                                <small class="text-primary float-right">Desc. </small>
                             </td>
                             <td>
-                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;"></td>
+                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                            </td>
                             <td>
-                                <span class="money_type">$</span><span class="subtotal">27.50</span>
+                                <span class="money_type">$</span>
+                                <span class="subtotal">27.50</span>
                             </td>
                         </tr>
                         <tr>
@@ -113,34 +119,42 @@
                             </td>
                             <td>
                                 <p data-toggle="tooltip" data-placement="top" title="">Refresco Coca Cola botella de 600 ml</p>
-                                <small class="text-muted float-left">Refresco</small><small class="text-primary float-right delete_item">Eliminar</small>
+                                <small class="text-muted float-left">Refresco</small>
+                                <small class="text-primary float-right delete_item">Eliminar</small>
                             </td>
                             <td>
-                                <span class="money_type">$</span><span class="total_per_unit" data-price="13.50">13.50</span>
+                                <span class="money_type">$</span>
+                                <span class="total_per_unit" data-price="13.50">13.50</span>
                                 <small class="text-primary float-right">Descuento</small>
                             </td>
-                            <td><input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;"></td>
                             <td>
-                                <span class="money_type">$</span><span class="subtotal">13.50</span>
+                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                            </td>
+                            <td>
+                                <span class="money_type">$</span>
+                                <span class="subtotal">13.50</span>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <img src="images/sabritas.jpg" width="60px" class="img-thumbnail" alt="sabritas">
                             </td>
-
                             <td>
                                 <p data-toggle="tooltip" data-placement="top" title="Papas Ruffles sabor queso 200 g">Papas Ruffles sabor queso 200 g</p>
-                                <small class="text-muted float-left">Papas y Frituras</small><small class="text-primary float-right delete_item">Eliminar</small>
+                                <small class="text-muted float-left">Papas y Frituras</small>
+                                <small class="text-primary float-right delete_item">Eliminar</small>
                             </td>
                             <td>
-                                <span class="money_type">$</span><span class="total_per_unit" data-price="38.00">38.00</span>
+                                <span class="money_type">$</span>
+                                <span class="total_per_unit" data-price="38.00">38.00</span>
                                 <small class="text-primary float-right">Descuento</small>
-
                             </td>
-                            <td><input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;"></td>
                             <td>
-                                <span class="money_type">$</span><span class="subtotal">38.00</span>
+                                <input class="form-control quantity" type="number" value="1" min="1" style="width: 100px;">
+                            </td>
+                            <td>
+                                <span class="money_type">$</span>
+                                <span class="subtotal">38.00</span>
                             </td>
                         </tr>
                     </tbody>
@@ -151,65 +165,77 @@
                         <p class="float-left">Total</p>
                     </div>
                     <div class="col-3">
-                        <p class="float-right"><span class="money_type">$</span><span class="total">0</span></p>
+                        <p class="float-right">
+                            <span class="money_type">$</span>
+                            <span class="total">0</span>
+                        </p>
                     </div>
                 </div>
-
                 <!-- -######################################################################Altas -->
                 <div id="register">
 
                     <div class="form-group">
                         <label for="name">Codigo de Barras:</label>
-                        <input type="text" class="form-control" id="pwd">
+                        <input type="number" class="form-control" id="pwd">
                     </div>
+
                     <div class="form-group">
                         <label for="name">Nombre:</label>
                         <input type="text" class="form-control" id="pwd">
                     </div>
-                    <div class="form-group">
-                        <label for="name">Categoria: Multiples</label>
-                        <input type="text" class="form-control" id="pwd">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Marca:</label>
-                        <input type="text" class="form-control" id="pwd">
-                    </div>
+
                     <div class="form-group">
                         <label for="name">Descripcion:</label>
                         <input type="text" class="form-control" id="pwd">
                     </div>
+
                     <div class="form-group">
                         <label for="name">Característica:</label>
                         <input type="text" class="form-control" id="pwd">
-                        <label for="name">Color:</label>
-                        <input type="text" class="form-control" id="pwd">
-                        <label for="name">Tipo:</label>
-                        <input type="text" class="form-control" id="pwd">
                     </div>
+
+                    <div class="form-group">
+                        <label for="sel1">Selecciona marca:</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sel2">Selecciona categoria (presiona control y haz click para selecionar mas de uno):</label>
+                        <select multiple class="form-control" id="sel2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <label for="name">Cantidad:</label>
                         <input type="text" class="form-control" id="pwd">
                     </div>
+
                     <div class="form-group">
                         <label for="name">Contenido Neto:</label>
                         <input type="text" class="form-control" id="pwd">
                     </div>
+
                     <div class="form-group">
                         <label for="name">Precio:</label>
                         <input type="text" class="form-control" id="pwd">
                     </div>
-                    <div class="form-group">
-                        <label for="name">Disponible:</label>
-                        <input type="text" class="form-control" id="pwd">
-                    </div>
+
                     <div class="form-group">
                         <label for="name">Foto:</label>
                         <input type="text" class="form-control" id="pwd">
                     </div>
-                    <div class="form-group">
-                        <label for="name">Active:</label>
-                        <input type="text" class="form-control" id="pwd">
-                    </div>
+
+
 
                     <!-- product{
                             id,
@@ -241,14 +267,9 @@
 
 
                 </div>
-
-
             </div>
         </div>
-
         <hr>
-
-
     </main>
 
     <footer class="container">
@@ -257,7 +278,6 @@
 
     <script src="js/jquery/jquery-3.2.1.min.js"></script>
     <script src="js/jquery/jquery-confirm.min.js"></script>
-
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/fontawesome/fa-brands.min.js"></script>
@@ -270,6 +290,7 @@
 
     <script>
         $(document).ready(function() {
+
             const business_name = "Amazon";
             const company_name = "BMN";
             const department_text = "Departamentos";
@@ -280,7 +301,6 @@
             $(".category_text").text(categories_text);
             $(".department_text").text(department_text);
             $(".home_text").text(home_text);
-
             $('img').elevateZoom({
                 scrollZoom: true
             });
@@ -288,22 +308,18 @@
         })
 
         $(document).on('keyup mouseup', '.quantity', function() {
-
             getSubtotalPerQuantity($(this));
             getTotalSale($(this).closest('table'));
         });
 
         $(document).on('keyup mouseup', '.discount', function() {
-            //falta el de discount
             getTotalPerDiscount($(this));
-
             getSubtotalPerQuantity($(this));
-
             getTotalSale($(this).closest('table'));
         });
 
         $(document).on('click', '.delete_item', function() {
-            ConfirmDialog($(this));
+            confirmDialog($(this));
         });
 
         function getTotalPerDiscount(item) {
@@ -317,7 +333,6 @@
 
         }
 
-
         function getSubtotalPerQuantity(item) {
 
             var parent = item.closest('tr');
@@ -330,19 +345,18 @@
 
         function getTotalSale(cart) {
 
-            console.log(cart.length);
             var total = $(".total");
             var subtotals = cart.find(".subtotal");
             var sum = 0;
+
             subtotals.each(function() {
                 sum += Number($(this).text().replace(",", ""));
-
             })
-            total.text(sum.toFixed(2));
 
+            total.text(sum.toFixed(2));
         }
 
-        function ConfirmDialog(item) {
+        function confirmDialog(item) {
             $.confirm({
                 theme: 'dark',
                 type: 'orange',
@@ -373,7 +387,6 @@
             });
         };
     </script>
-
     <!-- poner ofertas de 2 por uno -->
     <!-- ver los de kilos en azucar -->
     <!-- productos por
