@@ -175,38 +175,35 @@
                 <div id="register">
 
                     <div class="form-group">
-                        <label for="name">Codigo de Barras:</label>
-                        <input type="number" class="form-control" id="pwd">
+                        <label for="product_name">Nombre:</label>
+                        <label>*</label>
+                        <input type="text" class="form-control" id="product_name">
                     </div>
 
                     <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" class="form-control" id="pwd">
+                        <label for="description">Descripcion:</label>
+                        <input type="text" class="form-control" id="description">
                     </div>
 
                     <div class="form-group">
-                        <label for="name">Descripcion:</label>
-                        <input type="text" class="form-control" id="pwd">
+                        <label for="characteristics">Característica:</label>
+                        <input type="text" class="form-control" id="characteristics">
                     </div>
 
                     <div class="form-group">
-                        <label for="name">Característica:</label>
-                        <input type="text" class="form-control" id="pwd">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="sel1">Selecciona marca:</label>
-                        <select class="form-control">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                        <label for="brand_name">Selecciona marca:</label>
+                        <label>*</label>
+                        <select class="form-control" id="brand_name">
+                            <option>Coca cola</option>
+                            <option>Pepsi</option>
+                            <option>Santa Clara</option>
+                            <option>Ariel</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="sel2">Selecciona categoria (presiona control y haz click para selecionar mas de uno):</label>
-                        <select multiple class="form-control" id="sel2">
+                        <label for="category_name">Selecciona categoria (presiona control y haz click para selecionar mas de uno):</label>
+                        <select multiple class="form-control" id="category_name">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -215,28 +212,66 @@
                         </select>
                     </div>
 
-                    <div class="form-group">
-                        <label for="name">Cantidad:</label>
-                        <input type="text" class="form-control" id="pwd">
+                    <div class="row">
+
+                        <div class="col form-group">
+                            <label for="bar_code">Codigo de Barras:</label>
+                            <label>*</label>
+                            <input type="number" class="form-control" id="bar_code">
+                        </div>
+
+                        <div class="col">
+                            <div class="row">
+
+                                <div class="col form-group">
+                                    <label for="net_content">Contenido Neto:</label>
+                                    <input type="number" class="form-control" id="net_content">
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="measurement">Selecciona Medida:</label>
+                                    <label>*</label>
+                                    <select class="form-control" id="measurement">
+                                        <option>ml</option>
+                                        <option>kg</option>
+                                        <option>litros</option>
+                                        <option>oz</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col form-group">
+                            <label for="quantity">Cantidad:</label>
+                            <input type="number" class="form-control" id="quantity">
+                        </div>
+
+                        <div class="col form-group">
+                            <label for="price">Precio:</label>
+                            <label>*</label>
+                            <input type="number" class="form-control" id="price">
+                        </div>
+
                     </div>
-
-                    <div class="form-group">
-                        <label for="name">Contenido Neto:</label>
-                        <input type="text" class="form-control" id="pwd">
+                    <div class="row">
+                        <div class="col form-group">
+                            <label for="presentation">Presentacion:</label>
+                            <select class="form-control" id="presentation">
+                                <option>Botella</option>
+                                <option>Botella retornable</option>
+                                <option>Lata</option>
+                                <option>Caja</option>
+                                <option>Sobre</option>
+                                <option>Paquete</option>
+                                <option>Bolsa</option>
+                            </select>
+                        </div>
+                        <div class="col form-group">
+                            <label for="image">Imagen:</label>
+                            <input type="file" class="form-control" id="image">
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="name">Precio:</label>
-                        <input type="text" class="form-control" id="pwd">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Foto:</label>
-                        <input type="text" class="form-control" id="pwd">
-                    </div>
-
-
-
                     <!-- product{
                             id,
                             co
@@ -338,7 +373,8 @@
             var parent = item.closest('tr');
             var subtotal = parent.find(".subtotal");
             var total_per_unit = parent.find(".total_per_unit");
-            var final_subtotal = (Number(total_per_unit.text().replace(",", "")) * parent.find('.quantity').val()).toFixed(2);
+            var final_subtotal = (Number(total_per_unit.text().replace(",", "")) * parent.find('.quantity').val()).toFixed(
+                2);
             subtotal.text(final_subtotal);
 
         }
