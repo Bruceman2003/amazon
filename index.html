@@ -173,134 +173,123 @@
                 </div>
                 <!-- -######################################################################Altas -->
                 <div id="register">
-
-                    <div class="form-group">
-                        <label for="product_name">Nombre:</label>
-                        <label>*</label>
-                        <input type="text" class="form-control" id="product_name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="description">Descripcion:</label>
-                        <input type="text" class="form-control" id="description">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="characteristics">Característica:</label>
-                        <input type="text" class="form-control" id="characteristics">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="brand_name">Selecciona marca:</label>
-                        <label>*</label>
-                        <select class="form-control" id="brand_name">
-                            <option>Coca cola</option>
-                            <option>Pepsi</option>
-                            <option>Santa Clara</option>
-                            <option>Ariel</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="category_name">Selecciona categoria (presiona control y haz click para selecionar mas de uno):</label>
-                        <select multiple class="form-control" id="category_name">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                        </select>
-                    </div>
-
                     <div class="row">
+                        <div class="offset-sm-3 col-sm-6">
+                            <div class="form-group">
+                                <label for="product_name">Nombre:</label>
+                                <label>*</label>
+                                <input type="text" class="form-control" id="product_name">
+                            </div>
 
-                        <div class="col form-group">
-                            <label for="bar_code">Codigo de Barras:</label>
-                            <label>*</label>
-                            <input type="number" class="form-control" id="bar_code">
-                        </div>
+                            <div class="form-group">
+                                <label for="description">Descripción:</label>
+                                <textarea class="form-control" rows="3" id="description"></textarea>
+                            </div>
 
-                        <div class="col">
-                            <div class="row">
+                            <div class="form-group">
+                                <label for="characteristics">Característica:</label>
+                                <textarea class="form-control" rows="3" id="characteristics"></textarea>
+                            </div>
 
-                                <div class="col form-group">
-                                    <label for="net_content">Contenido Neto:</label>
-                                    <input type="number" class="form-control" id="net_content">
-                                </div>
+                            <div class="form-group">
+                                <label for="brand_name">Selecciona marca:</label>
+                                <label>*</label>
+                                <select class="form-control" id="brand_name">
+                                    <option value="0">No aplica</option>
+                                    <option value="1">Coca cola</option>
+                                    <option value="2">Pepsi</option>
+                                    <option value="3">Santa Clara</option>
+                                    <option value="4">Ariel</option>
+                                </select>
+                            </div>
 
-                                <div class="col form-group">
-                                    <label for="measurement">Selecciona Medida:</label>
-                                    <label>*</label>
-                                    <select class="form-control" id="measurement">
-                                        <option>ml</option>
-                                        <option>kg</option>
-                                        <option>litros</option>
-                                        <option>oz</option>
-                                    </select>
-                                </div>
-
+                            <div class="form-group">
+                                <label for="category_name">Selecciona categoria (presiona control y haz click para selecionar mas de uno):</label>
+                                <select multiple class="form-control" id="category_name">
+                                    <option value="0">Despensa</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
+                                    <option value="4">5</option>
+                                </select>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col form-group">
-                            <label for="quantity">Cantidad:</label>
-                            <input type="number" class="form-control" id="quantity">
+                    <div class="row">
+                        <div class="offset-3 col-sm-6">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="bar_code">Codigo de Barras:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="bar_code">
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="provider_price">Precio de proveedor:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="provider_price">
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="client_price">Precio al cliente:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="client_price">
+                                </div>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="col form-group">
-                            <label for="price">Precio:</label>
-                            <label>*</label>
-                            <input type="number" class="form-control" id="price">
+                    <div class="row">
+                        <div class="offset-3 col-sm-6">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="quantity">Cantidad:</label>
+                                    <input type="number" class="form-control" id="quantity">
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col form-group" style="padding-right: 0;">
+                                            <label for="net_content">Cont. Neto:</label>
+                                            <input type="number" class="form-control" id="net_content">
+                                        </div>
+                                        <div class="col form-group" style="padding-left: 0;">
+                                            <label for="measurement">Medida:</label>
+                                            <select class="form-control" id="measurement">
+                                                <option value="0">No aplica</option>
+                                                <option value="1">ml</option>
+                                                <option value="2">kg</option>
+                                                <option value="3">litros</option>
+                                                <option value="4">oz</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col form-group">
+                                    <label for="presentation">Presentacion:</label>
+                                    <select class="form-control" id="presentation">
+                                        <option value="0">No aplica</option>
+                                        <option value="1">Botella de plastico</option>
+                                        <option value="2">Botella de vidrio</option>
+                                        <option value="3">Botella retornable</option>
+                                        <option value="4">Lata</option>
+                                        <option value="5">Caja</option>
+                                        <option value="6">Sobre</option>
+                                        <option value="7">Paquete</option>
+                                        <option value="8">Bolsa</option>
+                                        <option value="8">envoltura</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                     <div class="row">
-                        <div class="col form-group">
-                            <label for="presentation">Presentacion:</label>
-                            <select class="form-control" id="presentation">
-                                <option>Botella</option>
-                                <option>Botella retornable</option>
-                                <option>Lata</option>
-                                <option>Caja</option>
-                                <option>Sobre</option>
-                                <option>Paquete</option>
-                                <option>Bolsa</option>
-                            </select>
-                        </div>
-                        <div class="col form-group">
+                        <div class="offset-3 col-sm-6 form-group">
                             <label for="image">Imagen:</label>
                             <input type="file" class="form-control" id="image">
                         </div>
                     </div>
-                    <!-- product{
-                            id,
-                            co
-                            nombre,
-                            descripcions,
-                            características{
-                            color,
-                            capacidad,
-                            
-                            }
-                            cantidad,
-                            nota,
-                            precio,
-                            disponible,
-                            foto
-                            active,
-                            }
-                            
-                            
-                            descuento{
-                            id,
-                            name,
-                            restricciones[],
-                            inicial date,
-                            final_date,
-                            active,
-                            } -->
-
-
                 </div>
             </div>
         </div>
@@ -373,8 +362,7 @@
             var parent = item.closest('tr');
             var subtotal = parent.find(".subtotal");
             var total_per_unit = parent.find(".total_per_unit");
-            var final_subtotal = (Number(total_per_unit.text().replace(",", "")) * parent.find('.quantity').val()).toFixed(
-                2);
+            var final_subtotal = (Number(total_per_unit.text().replace(",", "")) * parent.find('.quantity').val()).toFixed(2);
             subtotal.text(final_subtotal);
 
         }
