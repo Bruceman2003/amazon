@@ -87,12 +87,12 @@
                             </td>
                             <td>
                                 <small class="text-muted">
-                                    <del>
+                                    <del class="original">
                                         <span class="money_type">$</span>
-                                        <span class="">27.50</span>
+                                        <span >27.50</span>
                                     </del>
                                     <span> - </span>
-                                    <div class="btn-group">
+                                    <div class="btn-group discount_group">
                                         <input class="form-control discount" type="number" value="0" min="0" max="100" style="width: 75px;height: 25px;">
                                         <button type="button" class="btn btn-secondary" style="height: 25px;padding: 0;">%</button>
                                     </div>
@@ -101,8 +101,8 @@
                                 <span class="money_type">$</span>
                                 <span class="total_per_unit" data-price="27.50">27.50</span>
 
-                                <i class="fas fa-eye-slash float-right"></i>
-                                <i class="fas fa-eye float-right"> </i>
+                                <!-- <i class=" fa fa-eye-slash float-right"></i> -->
+                                <i class="desc_icon fa fa-eye float-right"> </i>
                                 <small class="text-primary float-right">Desc. </small>
                             </td>
                             <td>
@@ -340,12 +340,43 @@
             getTotalPerDiscount($(this));
             getSubtotalPerQuantity($(this));
             getTotalSale($(this).closest('table'));
+
+            var parent = $(this).closest('tr');
+            var original = parent.find(".original");
+            
+            if($(this).val() >0){
+                original.css({"display":"block"});
+            }else{
+                original.css({"display":"none"});
+            }
+
+
         });
 
         $(document).on('click', '.delete_item', function() {
             confirmDialog($(this));
         });
 
+$(document).on('click', '.desc_icon', function() {
+    var parent = $(this).closest('tr');
+    var discount_input = parent.find(".discount_group");
+
+    console.log(".."+discount_input.length);
+    
+          
+            if($(this).hasClass("fa-eye")){
+                $(this).removeClass("fa-eye");
+                $(this).addClass("fa-eye-slash");
+                discount_input.css({"display":"block"});
+            }else{
+                $(this).removeClass("fa-eye-slash");
+                $(this).addClass("fa-eye");
+                discount_input.css({"display":"none"});
+               
+            }
+
+
+        });
         function getTotalPerDiscount(item) {
 
             var parent = item.closest('tr');

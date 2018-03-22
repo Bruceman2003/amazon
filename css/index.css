@@ -23,6 +23,10 @@
     cursor: pointer;
 }
 
+.discount_group{
+    display: none;
+}
+
 .title {
     font-weight: bold;
     padding-left: 15px
