@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>BMN Business</title>
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="css/jquery/jquery-confirm.min.css" />
+    <link rel="stylesheet" href="css/fontawesome/fa-svg-with-js.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">BMN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link home_text" href="#">
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle department_text" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <input class="form-control" type="text" placeholder="Buscar" aria-label="Buscar">
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main">
+        <div class="jumbotron">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="btn-group btn-group-md" style="float: right;">
+                            <button type="button" class="btn">Bajas</button>
+                            <button type="button" class="btn btn-secondary">Cambios</button>
+                            <button type="button" class="btn btn-primary">Altas</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="title">Altas</h4>
+
+                <!-- -######################################################################Altas -->
+                <div id="register">
+                    <div class="row">
+                        <div class="offset-2 col-8">
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="brand_name">Selecciona tipo:</label>
+                                        <label>*</label>
+                                        <select class="form-control" id="brand_name">
+                                            <option value="0">No aplica</option>
+                                            <option value="1">Pantalon</option>
+                                            <option value="2">Playera</option>
+                                            <option value="3">Camisa</option>
+                                            <option value="4">Camiseta</option>
+                                            <option value="4">Calsetin</option>
+                                        </select>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col">
+                                    <div class="form-group">
+                                        <label for="brand_name">Selecciona marca:</label>
+                                        <label>*</label>
+                                        <select class="form-control" id="brand_name">
+                                            <option value="0">No aplica</option>
+                                            <option value="1">Nike</option>
+                                            <option value="2">Adidas</option>
+                                            <option value="3">Otro</option>
+                                            <option value="4">Ariel</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                        <div class="form-group">
+                                            <label for="brand_name">Selecciona modelo:</label>
+                                            <label>*</label>
+                                            <select class="form-control" id="brand_name">
+                                                <option value="0">No aplica</option>
+                                                <option value="1">2342343</option>
+                                                <option value="2">Adidas</option>
+                                                <option value="3">Otro</option>
+                                                <option value="4">Ariel</option>
+                                            </select>
+                                        </div>
+                                </div>
+                                
+                            </div>
+
+
+                            <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="brand_name">Selecciona color:</label>
+                                            <label>*</label>
+                                            <select class="form-control" id="brand_name">
+                                                <option value="0">No aplica</option>
+                                                <option value="1">Pantalon</option>
+                                                <option value="2">Playera</option>
+                                                <option value="3">Camisa</option>
+                                                <option value="4">Camiseta</option>
+                                                <option value="4">Calsetin</option>
+                                            </select>
+                                        </div>
+    
+    
+                                    </div>
+    
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="brand_name">Selecciona talla:</label>
+                                            <label>*</label>
+                                            <select class="form-control" id="brand_name">
+                                                <option value="0">No aplica</option>
+                                                <option value="1">Unitalla</option>
+                                                <option value="4">Chica/Small</option>
+                                                <option value="2">Mediana/Medium</option>
+                                                <option value="3">Grande/Large</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                            <div class="form-group">
+                                                <label for="brand_name">Selecciona caballero/dama:</label>
+                                                <label>*</label>
+                                                <select class="form-control" id="brand_name">
+                                                    <option value="0">No aplica</option>
+                                                    <option value="1">Unitalla</option>
+                                                    <option value="4">Chica/Small</option>
+                                                    <option value="2">Mediana/Medium</option>
+                                                    <option value="3">Grande/Large</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    <div class="col">
+                                            <div class="form-group">
+                                                <label for="brand_name">Selecciona talla:</label>
+                                                <label>*</label>
+                                                <select class="form-control" id="brand_name">
+                                                    <option value="0">No aplica</option>
+                                                    <option value="1">26/3/XS</option>
+                                                    <option value="1">28/5</option>
+                                                    <option value="2">30/7</option>
+                                                    <option value="3">32/9</option>
+                                                    <option value="3">34/11</option>
+                                                    <option value="3">36/13</option>
+                                                    <option value="3">38/15</option>
+                                                    <option value="3">40/17</option>
+                                                    <option value="3">42/19</option>
+                                                </select>
+                                            </div>
+                                    </div>
+                                    
+                                </div>
+
+
+                            <div class="form-group">
+                                <label for="description">Descripción:</label>
+                                <textarea class="form-control" rows="3" id="description"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="characteristics">Característica:</label>
+                                <textarea class="form-control" rows="3" id="characteristics"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category_name">Selecciona categoria (presiona control y haz click para selecionar mas de uno):</label>
+                                <select multiple class="form-control" id="category_name">
+                                    <option value="0">Despensa</option>
+                                    <option value="1">2</option>
+                                    <option value="2">3</option>
+                                    <option value="3">4</option>
+                                    <option value="4">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="offset-2 col-8">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="bar_code">Codigo de Barras:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="bar_code">
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="provider_price">Precio de proveedor:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="provider_price">
+                                </div>
+
+                                <div class="col form-group">
+                                    <label for="client_price">Precio al cliente:</label>
+                                    <label>*</label>
+                                    <input type="number" class="form-control" id="client_price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="offset-2 col-8">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <label for="quantity">Cantidad:</label>
+                                    <input type="number" class="form-control" id="quantity">
+                                </div>
+                                <div class="col form-group">
+                                    <label for="presentation">Presentacion:</label>
+                                    <select class="form-control" id="presentation">
+                                        <option value="0">No aplica</option>
+                                        <option value="1">Botella de plastico</option>
+                                        <option value="2">Botella de vidrio</option>
+                                        <option value="3">Botella retornable</option>
+                                        <option value="4">Lata</option>
+                                        <option value="5">Caja</option>
+                                        <option value="6">Sobre</option>
+                                        <option value="7">Paquete</option>
+                                        <option value="8">Bolsa</option>
+                                        <option value="8">envoltura</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col form-group" style="padding-right: 0;">
+                                            <label for="net_content">Cont. Neto por unidad:</label>
+                                            <input type="number" class="form-control" id="net_content">
+                                        </div>
+                                        <div class="col form-group" style="padding-left: 0;">
+                                            <label for="measurement">Medida:</label>
+                                            <select class="form-control" id="measurement">
+                                                <option value="0">No aplica</option>
+                                                <option value="1">ml</option>
+                                                <option value="2">kg</option>
+                                                <option value="3">litros</option>
+                                                <option value="4">oz</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="offset-2 col-8 form-group">
+                            <label for="image">Imagen:</label>
+                            <input type="file" class="form-control" id="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </main>
+
+    <footer class="container">
+        <p>&copy; BMN 2017-2018</p>
+    </footer>
+
+    <script src="js/jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery/jquery-confirm.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome/fa-brands.min.js"></script>
+    <script src="js/fontawesome/fa-regular.min.js"></script>
+    <script src="js/fontawesome/fa-solid.min.js"></script>
+    <script src="js/fontawesome/fa-v4-shims.min.js"></script>
+    <script src="js/fontawesome/fontawesome-all.min.js"></script>
+    <script src="js/fontawesome/fontawesome.min.js"></script>
+    <script src="js/elevatezoom/jquery.elevateZoom-3.0.8.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            const business_name = "Amazon";
+            const company_name = "BMN";
+            const department_text = "Departamentos";
+            const categories_text = "Categorias";
+            const home_text = "Inicio";
+
+            $(".business_name").text(business_name);
+            $(".category_text").text(categories_text);
+            $(".department_text").text(department_text);
+            $(".home_text").text(home_text);
+            $('img').elevateZoom({
+                scrollZoom: true
+            });
+
+        })
+
+        $(document).on('keyup mouseup', '.quantity', function () {
+            getSubtotalPerQuantity($(this));
+            getTotalSale($(this).closest('table'));
+        });
+
+        $(document).on('keyup mouseup', '.discount', function () {
+            getTotalPerDiscount($(this));
+            getSubtotalPerQuantity($(this));
+            getTotalSale($(this).closest('table'));
+
+            var parent = $(this).closest('tr');
+            var original = parent.find(".original");
+
+            if ($(this).val() > 0) {
+                original.css({
+                    "display": "block"
+                });
+            } else {
+                original.css({
+                    "display": "none"
+                });
+            }
+
+
+        });
+
+        $(document).on('click', '.delete_item', function () {
+            confirmDialog($(this));
+        });
+
+        $(document).on('click', '.desc_icon', function () {
+            var parent = $(this).closest('tr');
+            var discount_input = parent.find(".discount_group");
+
+            console.log(".." + discount_input.length);
+
+
+            if ($(this).hasClass("fa-eye")) {
+                $(this).removeClass("fa-eye");
+                $(this).addClass("fa-eye-slash");
+                discount_input.css({
+                    "display": "block"
+                });
+            } else {
+                $(this).removeClass("fa-eye-slash");
+                $(this).addClass("fa-eye");
+                discount_input.css({
+                    "display": "none"
+                });
+
+            }
+
+
+        });
+
+        function getTotalPerDiscount(item) {
+
+            var parent = item.closest('tr');
+            var total_per_unit = parent.find(".total_per_unit");
+            var total_attr = total_per_unit.attr("data-price");
+            var value = Number(total_attr.replace(",", ""));
+            var final_subtotal = (value - (value * parent.find('.discount').val() / 100)).toFixed(2);
+            total_per_unit.text(final_subtotal);
+
+        }
+
+        function getSubtotalPerQuantity(item) {
+
+            var parent = item.closest('tr');
+            var subtotal = parent.find(".subtotal");
+            var total_per_unit = parent.find(".total_per_unit");
+            var final_subtotal = (Number(total_per_unit.text().replace(",", "")) * parent.find('.quantity').val()).toFixed(
+                2);
+            subtotal.text(final_subtotal);
+
+        }
+
+        function getTotalSale(cart) {
+
+            var total = $(".total");
+            var subtotals = cart.find(".subtotal");
+            var sum = 0;
+
+            subtotals.each(function () {
+                sum += Number($(this).text().replace(",", ""));
+            })
+
+            total.text(sum.toFixed(2));
+        }
+
+        function confirmDialog(item) {
+            $.confirm({
+                theme: 'dark',
+                type: 'orange',
+                icon: 'fa fa-warning',
+                title: 'Advertencia!',
+                content: '¿Está seguro de que desea eliminar?',
+                buttons: {
+
+                    cancel: {
+                        text: 'Cancelar',
+                        btnClass: 'btn-secondary',
+                        action: function () {
+                            $.alert('Canceled!');
+                        }
+                    },
+                    confirm: {
+                        text: 'Eliminar',
+                        btnClass: 'btn-primary',
+                        keys: ['enter', 'shift'],
+                        action: function () {
+                            var cart = item.closest('table');
+                            var block = item.closest('tr');
+                            block.remove();
+                            getTotalSale(cart);
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+    <!-- poner ofertas de 2 por uno -->
+    <!-- ver los de kilos en azucar -->
+    <!-- productos por
+medida liquida
+medida gramos
+tamaño nuevo codigo de barras
+tallas
+numeracion -->
+</body>
+
+</html>
